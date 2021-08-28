@@ -1,0 +1,61 @@
+#Sounds: https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+#Materials: https://helpch.at/docs/1.8/org/bukkit/Material.html
+#To reload this file use: /onlineguireload (permission: online.gui.reload)
+
+update: 40   #How frequently (in ticks) should the menu update while a player has it open, higher the number if you experience lag (requires restart)
+
+permission: 'online.gui.show'   #Players with this permission will appear in the menu
+
+cancel-escape: false   #If enabled the menu won't close when you press escape
+
+hide-vanished-players: true   #Requires VanishNoPacket
+
+open-sound: CHEST_OPEN
+
+sound-options: 
+  volume: 1.0
+  pitch: 0
+
+items:
+  black_glass:
+    name: '&r'
+    lore:
+    - 'monkey'
+    material: 'stained_glass_pane:15'
+    amount: 1
+    enchanted: false
+  barrier:
+    name: '&c&lCLOSE'
+    material: barrier
+    enchanted: true
+  next_arrow:
+    name: '&6&lNEXT PAGE'
+    material: arrow
+    enchanted: true
+  previous_arrow:
+    name: '&6&lPREVIOUS PAGE'
+    material: arrow
+    enchanted: true
+    
+player-item:
+  name: '%player_displayname%'
+  lore: 
+  - '&7cash: &a%vault_eco_balance_commas%'
+  - '&7afk: &c%essential_afk%'
+
+menu:
+  name: '&a&lONLINE &8&lPLAYERS'
+  rows: 6   #Make sure to adjust the slots when decreasing the size of the menu
+  player-slots: [10,11,12,13,14,15,16,19,20,21,22,23,24,25,28,29,30,31,32,33,34,37,38,39,40,41,42,43]
+  items:
+    black_glass: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,51,52,53]
+    barrier: [49]
+    next_arrow: [50]
+    previous_arrow: [48]
+  actions:
+    next_page: [50]
+    previous_page: [48]
+    close_menu: [49]
+  sounds:
+    ORB_PICKUP: [48,50]
+    CHEST_CLOSE: [49]

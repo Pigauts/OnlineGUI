@@ -1,0 +1,12 @@
+name: AOnlineGUI
+version: 1.0
+main: com.the.joshua.online.gui.GUIPlugin
+softdepend: [PlaceholderAPI, VanishNoPacket]
+authors: [TheJoshua, PizzaMan]
+commands:
+  online:
+    description: Use this to see all commands.
+    aliases: [ogui]
+  onlineguireload:
+    description: Reload the plugin
+    aliases: [oguireload]
